@@ -32,7 +32,6 @@ map <F12> :!svn propset svn:keywords "Id" %<CR>
 "   python autocomplete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 "
-"
 "   surround.vim
 "   see ~/.vim/plugin/surround.vim
 " '#'
@@ -55,6 +54,11 @@ autocmd FileType eruby let b:surround_116 = "<%=t \r %>"
 "   snipMate.vim
 "   see ~/.vim/plugin/snipmate.vim
 "   also see ~/.vim/snippets/*.snippet
+"
+"   Taglist/CTags
+"   see ~/.vim/plugin/taglist.vim
+"   also see http://vim-taglist.sourceforge.net/manual.html
+map <c-t> :TlistToggle<CR>
 "
 "   NERD_tree
 "   see ~/.vim/plugin/NERD_tree.vim
@@ -103,6 +107,7 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 "     see http://stackoverflow.com/questions/473478/vim-jslint, f3lix' answer
 "     also see http://www.fleegix.org/articles/2008-09-06-jslint-in-vim-through-lynx, from matt
 "     (dinna work that well, sadly)
+"     depends on local installation of JavaScript engine (spidermonkey works)
 "     also see /usr/local/bin/mylintrun.js
 "              /usr/local/lib/jslint.js
 "              /usr/local/bin/js
