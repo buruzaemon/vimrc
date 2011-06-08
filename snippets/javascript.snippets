@@ -1,4 +1,15 @@
 # Prototype
+
+# Jasmine suite block
+snippet des
+	describe(${1:Suite name}, function() {
+		${2:/* specs go here */}
+	});
+# Jasmine spec block
+snippet it
+	it("${1:do something good}", function() {
+		expect(${2:something}(${3:input})).${4:toEqual}(${5:expected});
+	});${6}
 snippet proto
 	${1:class_name}.prototype.${2:method_name} =
 	function(${3:first_argument}) {

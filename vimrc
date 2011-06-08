@@ -12,7 +12,7 @@ filetype plugin on
 
 compiler ruby
 
-colorscheme torte
+colorscheme desert
 
 set autoindent
 set smartindent
@@ -25,35 +25,40 @@ set nu
 set ruler
 set incsearch
 
-map <F12> :!svn propset svn:keywords "Id" %<CR>
+if has("autocmd")
+    " Automagically source your .vimrc upon save
+    autocmd BufWritePost .vimrc source $MYVIMRC
 
-" PLUGINS
-"
-"   python autocomplete
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-"
-"   surround.vim
-"   see ~/.vim/plugin/surround.vim
-" '#'
-autocmd FileType ruby  let b:surround_35 = "#{\r}"
-" '%'
-autocmd FileType ruby  let b:surround_25 = "%{\r}"
-" 'h'
-autocmd FileType eruby let b:surround_104 = "<%= \r %>"
-" 't'
-autocmd FileType eruby let b:surround_116 = "<%=t \r %>"
-"
-"   matchit.vim
-"   see ~/.vim/plugin/matchit.vim
-"   also see ~/.vim/ftplugin/python_matchit.vim
-"   also see ~/.vim/ftplugin/ruby-matchit.vim
-"
-"   repeat.vim
-"   see ~/.vim/autoload/repeat.vim
-"
-"   snipMate.vim
-"   see ~/.vim/plugin/snipmate.vim
-"   also see ~/.vim/snippets/*.snippet
+    "   python autocomplete
+    autocmd FileType python set omnifunc=pythoncomplete#Complete
+    "   JavaScript
+    autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
+    "   vim.ruby
+    "   your entire .vim/* is from vim.ruby!
+    "   rubyautocomplete
+    autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+    autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+    autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+    autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+
+    "   surround.vim
+    "   see ~/.vim/plugin/surround.vim
+    " '#'
+    autocmd FileType ruby  let b:surround_35 = "#{\r}"
+    " '%'
+    autocmd FileType ruby  let b:surround_25 = "%{\r}"
+    " 'h'
+    autocmd FileType eruby let b:surround_104 = "<%= \r %>"
+    " 't'
+    autocmd FileType eruby let b:surround_116 = "<%=t \r %>"
+endif
+
+" MAPPINGS
+"   <F6> outputs date into file at cursor position
+map <F6> :,!date<CR>
+"   <F12> sets the svn "Id" keyword on the file in the buffer
+map <F12> :!svn propset svn:keywords "Id" %<CR>
 "
 "   Taglist/CTags
 "   see ~/.vim/plugin/taglist.vim
@@ -72,14 +77,20 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 nmap <silent> <PageUp> :MBEbn<cr>
 nmap <silent> <PageDown> :MBEbp<cr>
+
+
+" PLUGINS
+"   matchit.vim
+"   see ~/.vim/plugin/matchit.vim
+"   also see ~/.vim/ftplugin/python_matchit.vim
+"   also see ~/.vim/ftplugin/ruby-matchit.vim
 "
-"   vim.ruby
-"   your entire .vim/* is from vim.ruby!
-"   rubyautocomplete
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+"   repeat.vim
+"   see ~/.vim/autoload/repeat.vim
+"
+"   snipMate.vim
+"   see ~/.vim/plugin/snipmate.vim
+"   also see ~/.vim/snippets/*.snippet
 "
 "   supertab.vim
 "   see ~/.vim/supertab.vba
@@ -91,9 +102,6 @@ highlight Pmenu ctermbg=LightGrey ctermfg=Black
 "
 "   rails.vim
 "   see :help rails
-"
-"   JavaScript
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 "
 "     IndentAnything/
 "     see :help IndentAnything
