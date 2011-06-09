@@ -2,11 +2,34 @@
 snippet #!
 	#!/usr/bin/ruby
 
-# New Block
+# RSpec
+snippet des
+	des "${1:description}" do
+	  ${2}
+	end
+snippet ctx
+	context "${1:context}" do
+	  ${2}
+	end
+snippet it
+	it "${1:should do something}" do
+	  @${2:var}.${3:attr}.${4:should} ${5:eq}(${6:expected})${7}
+	end
+snippet bef
+	before(:${1:all}) do
+	  @${2:var} = ${3:Factory.build}(${4::key})${5}
+	end
+snippet aft
+	after(:${1:all}) do
+	  @${2:var}${3:.delete}${4}
+	end
+
+# comment-block w/ svn Id keyword as default
 snippet =B
 	=begin
-	  $Id$
+	  $${1:Id}$
 	=end
+# New Block
 snippet =b
 	=begin rdoc
 		${1}
