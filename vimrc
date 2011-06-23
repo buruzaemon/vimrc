@@ -25,6 +25,14 @@ set nu
 set ruler
 set incsearch
 
+"   unimpaired.vim
+"     bubble single lines
+nmap <c-Up> [e
+nmap <c-Down> ]e
+"     bubble multiple lines
+vmap <c-Up> [egv
+vmap <c-Down> ]egv
+
 if has("autocmd")
     " Automagically source your .vimrc upon save
     autocmd BufWritePost .vimrc source $MYVIMRC
@@ -121,3 +129,4 @@ highlight Pmenu ctermbg=LightGrey ctermfg=Black
 "              /usr/local/bin/js
 set makeprg=cat\ %\ \\\|\ /usr/local/bin/js\ /usr/local/bin/mylintrun.js\ %
 set errorformat=%f:%l:%c:%m
+
