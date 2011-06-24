@@ -6,10 +6,6 @@ set encoding=utf8
 set fileencoding=utf8
 set termencoding=utf8
 
-filetype on
-filetype indent on
-filetype plugin on
-
 compiler ruby
 
 colorscheme desert
@@ -24,14 +20,17 @@ set showmatch
 set nu
 set ruler
 set incsearch
+set hidden
 
 "   unimpaired.vim
 "     bubble single lines
-nmap <c-Up> [e
-nmap <c-Down> ]e
+nmap <s-j> [e
+nmap <s-k> ]e
 "     bubble multiple lines
-vmap <c-Up> [egv
-vmap <c-Down> ]egv
+vmap <s-j> [egv
+vmap <s-k> ]egv
+
+filetype plugin indent on
 
 if has("autocmd")
     " Automagically source your .vimrc upon save
@@ -129,4 +128,3 @@ highlight Pmenu ctermbg=LightGrey ctermfg=Black
 "              /usr/local/bin/js
 set makeprg=cat\ %\ \\\|\ /usr/local/bin/js\ /usr/local/bin/mylintrun.js\ %
 set errorformat=%f:%l:%c:%m
-
