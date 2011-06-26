@@ -8,7 +8,7 @@ set termencoding=utf8
 
 compiler ruby
 
-colorscheme desert
+colorscheme zenburn
 
 set autoindent
 set smartindent
@@ -24,11 +24,11 @@ set hidden
 
 "   unimpaired.vim
 "     bubble single lines
-nmap <s-j> [e
-nmap <s-k> ]e
+nmap <s-o> [e
+nmap <s-p> ]e
 "     bubble multiple lines
-vmap <s-j> [egv
-vmap <s-k> ]egv
+vmap <s-o> [egv
+vmap <s-p> ]egv
 
 filetype plugin indent on
 
