@@ -123,8 +123,8 @@ highlight Pmenu ctermbg=LightGrey ctermfg=Black
 "     also see http://www.fleegix.org/articles/2008-09-06-jslint-in-vim-through-lynx, from matt
 "     (dinna work that well, sadly)
 "     depends on local installation of JavaScript engine (spidermonkey works)
-"     also see /usr/local/bin/mylintrun.js
-"              /usr/local/lib/jslint.js
+"     also see ~/.vim/bin/mylintrun.js
+"              ~/.vim/lib/jslint.js
 "              /usr/local/bin/js
-set makeprg=cat\ %\ \\\|\ /usr/local/bin/js\ /usr/local/bin/mylintrun.js\ %
+set makeprg=cat\ %\ \\\|\ /usr/local/bin/js\ $HOME/.vim/bin/mylintrun.js\ %\ $HOME\
 set errorformat=%f:%l:%c:%m
