@@ -1,28 +1,3 @@
-/*
-Copyright (c) 2008 Kai Hendry (hendry.iki.fi)
-Copyright (c) 2008 Cory Bennett (www.corybennett.org)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-of the Software, and to permit persons to whom the Software is furnished to do
-so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-The Software shall be used for Good, not Evil.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-*/
-
 /* This is enhanced and modified code taken from Ian Bicking's blog post of
    2005-08-19 here:
    http://blog.ianbicking.org/jslint-command-line.html
@@ -30,10 +5,10 @@ SOFTWARE.
 
 /* SpiderMonkey globals */
 /*global environment, load, JSLINT, print, readline */
-var filename = arguments[0];
 var home = arguments[1].replace(/^\s+|\s+$/g,"");
-load(home + "/.vim/lib/jslint.js");
+load(home+"/.vim/lib/jslint.js");
 
+var filename = arguments[0];
 var body = "";
 var line;
 var blcount = 0;
@@ -85,11 +60,11 @@ boolOptions = {
 
 var result = JSLINT(body, boolOptions);
 if (!result) {
-	for (i = 0; i < JSLINT.errors.length; i++) {
+	for (var i = 0; i < JSLINT.errors.length; i++) {
 		obj = JSLINT.errors[i];
 		// print ( obj.toSource() ); // DEBUG
 		//print ( (obj["line"] + 1) + ":" + (obj["character"] + 1) + ":" + obj["reason"] );
-		print(filename + ":" + (obj["line"] + 1) + ":" + (obj["character"] + 1) + ":" + obj["reason"]);
+		print(filename + ":" + (obj["line"]) + ":" + (obj["character"] + 1) + ":" + obj["reason"]);
 	}
 }
 
