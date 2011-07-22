@@ -22,6 +22,13 @@ set ruler
 set incsearch
 set hidden
 
+"   code folding
+set foldmethod=manual
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+
 "   unimpaired.vim
 "     bubble single lines
 nmap <s-o> [e
