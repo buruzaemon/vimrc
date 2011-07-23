@@ -1,3 +1,5 @@
 $ cd ~/.vim
 $ hg clone https://buruzaemon@me-vimrc.googlecode.com/hg/ .
 $ ln -s vimrc ~/.vimrc
+$ ln -s pythonrcpy ~/.pythonrc.py
+export PYTHONSTARTUP=~/.pythonrc.py
