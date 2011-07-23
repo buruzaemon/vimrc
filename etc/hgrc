@@ -7,4 +7,5 @@ fallbackencoding = utf8
 hgext.purge=
 
 [web]
+# c.f http://curl.haxx.se/ca/cacert.pem
 cacerts = ~/cacert.pem
