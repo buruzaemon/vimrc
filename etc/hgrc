@@ -1,0 +1,10 @@
+[ui]
+username = buruzaemon <buruzaemon@gmail.com>
+verbose = True
+fallbackencoding = utf8
+
+[extensions]
+hgext.purge=
+
+[web]
+cacerts = ~/cacert.pem
