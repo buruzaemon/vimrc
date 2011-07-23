@@ -1,0 +1,9 @@
+import sys
+
+ps1_str = "py%d%d>" % (sys.version_info[0], sys.version_info[1])
+ps2_str = len(ps1_str)*"."
+
+sys.ps1 = '\033[1;36m%s \33[0m' % ps1_str
+sys.ps2 = '\033[1;36m%s \33[0m' % ps2_str
+
+del(ps1_str, ps2_str, sys)
