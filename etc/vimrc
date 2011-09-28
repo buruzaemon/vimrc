@@ -21,6 +21,7 @@ set nu
 set ruler
 set incsearch
 set hidden
+set noea
 
 "   code folding
 set foldmethod=manual
