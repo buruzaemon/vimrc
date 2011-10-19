@@ -70,7 +70,7 @@ let s:hgFunctions = {}
 " Returns the executable used to invoke hg suitable for use in a shell
 " command.
 function! s:Executable()
-	return shellescape(VCSCommandGetOption('VCSCommandHGExec', 'hg'))
+	return VCSCommandGetOption('VCSCommandHGExec', 'hg')
 endfunction
 
 " Function: s:DoCommand(cmd, cmdName, statusText, options) {{{2
@@ -110,10 +110,10 @@ endfunction
 " Function: s:hgFunctions.Annotate(argList) {{{2
 function! s:hgFunctions.Annotate(argList)
 	if len(a:argList) == 0
-		if &filetype == 'HGannotate'
+		if &filetype ==? 'hgannotate'
 			" Perform annotation of the version indicated by the current line.
-			let caption = matchstr(getline('.'),'\v^\s+\zs\d+')
-			let options = ' -r' . caption
+			let caption = matchstr(getline('.'),'\v^\s*\w+\s+\zs\d+')
+			let options = ' -un -r' . caption
 		else
 			let caption = ''
 			let options = ' -un'
