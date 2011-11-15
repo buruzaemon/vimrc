@@ -14,3 +14,7 @@ export PYTHONSTARTUP=~/.pythonrc.py
 $ ln -s .vim/etc/irbrc ~/.irbrc
 ... you should install that interactive_editor gem
 c.f. http://vimcasts.org/episodes/running-vim-within-irb/
+
+$ ln -s .vim/etc/csirc ~/.csirc
+$ touch ~/.csi.history
+... make sure you have readline and (ir)regex eggs installed
