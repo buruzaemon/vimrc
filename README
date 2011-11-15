@@ -1,11 +1,11 @@
 $ mkdir ~/.vim
 $ cd ~/.vim
-$ hg clone https://buruzaemon@me-vimrc.googlecode.com/hg/ .
+$ hg clone https://buruzaemon@bitbucket.org/buruzaemon/me-vimrc 
 $ cd
 $ ln -s .vim/etc/vimrc ~/.vimrc
 
 $ ln -s .vim/etc/hgrc ~/.hgrc
-... you may want to fetch that cacert.pem
+... cacert.pem included at etc/cacert.pem
 c.f. http://curl.haxx.se/ca/cacert.pem
 
 $ ln -s .vim/etc/pythonrcpy ~/.pythonrc.py

@@ -8,4 +8,4 @@ hgext.purge=
 
 [web]
 # c.f http://curl.haxx.se/ca/cacert.pem
-cacerts = ~/cacert.pem
+cacerts = ~/.vim/etc/cacert.pem
