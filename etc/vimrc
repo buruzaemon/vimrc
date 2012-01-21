@@ -53,6 +53,13 @@ if has("autocmd")
     "     also see http://www.fleegix.org/articles/2008-09-06-jslint-in-vim-through-lynx, from matt
     "     (dinna work that well, sadly)
     "     depends on local installation of JavaScript engine (spidermonkey works)
+    "
+    "     $ wget http://ftp.mozilla.org/pub/mozilla.org/js/js-1.8.0-rc1.tar.gz
+    "     $ tar zxf ... -C /usr/local/src/.
+    "     $ cd js/src
+    "     $ make -f Makefile.ref OS_ARCH='Linux' -k
+    "     $ ln -s /usr/local/src/js/src/Linux_All_DBG.OBJ/js.exe js
+    "
     "     also see ~/.vim/bin/mylintrun.js
     "              ~/.vim/lib/jslint.js
     "              /usr/local/bin/js
