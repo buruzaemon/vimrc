@@ -1,0 +1,20 @@
+$ mkdir ~/.vim
+$ cd ~/.vim
+$ hg clone https://buruzaemon@bitbucket.org/buruzaemon/me-vimrc 
+$ cd
+$ ln -s .vim/etc/vimrc ~/.vimrc
+
+$ ln -s .vim/etc/hgrc ~/.hgrc
+... cacert.pem included at etc/cacert.pem
+c.f. http://curl.haxx.se/ca/cacert.pem
+
+$ ln -s .vim/etc/pythonrcpy ~/.pythonrc.py
+export PYTHONSTARTUP=~/.pythonrc.py
+
+$ ln -s .vim/etc/irbrc ~/.irbrc
+... you should install that interactive_editor gem
+c.f. http://vimcasts.org/episodes/running-vim-within-irb/
+
+$ ln -s .vim/etc/csirc ~/.csirc
+$ touch ~/.csi.history
+... make sure you have readline and (ir)regex eggs installed

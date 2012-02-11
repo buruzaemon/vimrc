@@ -1,0 +1,11 @@
+[ui]
+username = buruzaemon
+verbose = True
+fallbackencoding = utf8
+
+[extensions]
+hgext.purge=
+
+[web]
+# c.f http://curl.haxx.se/ca/cacert.pem
+cacerts = ~/.vim/etc/cacert.pem
