@@ -19,9 +19,20 @@ set shiftwidth=4
 set showmatch
 set nu
 set ruler
+set relativenumber
+set undofile
+set ignorecase
+set smartcase
 set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><space> :noh<cr>
 set hidden
 set noea
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=79
 
 "   code folding
 set foldmethod=manual
@@ -108,7 +119,14 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 nmap <silent> <PageUp> :MBEbn<cr>
 nmap <silent> <PageDown> :MBEbp<cr>
-
+"
+"   Ack command shortcut
+"   see http://stevelosh.com/blog/2010/09/coming-home-to-vim/?
+nnoremap <leader>a :Ack
+"
+"   HTML tag-folding
+"   see http://stevelosh.com/blog/2010/09/coming-home-to-vim/?
+nnoremap <leader>ft Vatzf
 
 " PLUGINS
 "   matchit.vim
