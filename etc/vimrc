@@ -20,7 +20,6 @@ set showmatch
 set nu
 set ruler
 set relativenumber
-set undofile
 set ignorecase
 set smartcase
 set incsearch
