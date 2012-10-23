@@ -8,7 +8,9 @@ set termencoding=utf8
 
 compiler ruby
 
-colorscheme zenburn
+"colorscheme zenburn
+set background=dark
+color mango
 
 set autoindent
 set smartindent
