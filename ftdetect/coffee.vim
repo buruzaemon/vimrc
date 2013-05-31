@@ -4,6 +4,6 @@
 " License:     WTFPL
 
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-autocmd BufNewFile,BufRead *.coffee.erb set filetype=coffee
+autocmd BufNewFile,BufRead *.coffee.erb,*.hbs set filetype=coffee
 autocmd BufNewFile,BufRead *Cakefile set filetype=coffee
 autocmd BufNewFile,BufRead *.coffeekup set filetype=coffee
