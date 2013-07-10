@@ -6,6 +6,7 @@ fallbackencoding = utf8
 
 [extensions]
 hgext.purge=
+mq=
 
 [web]
 # c.f http://curl.haxx.se/ca/cacert.pem
