@@ -1,6 +1,6 @@
 [ui]
 username = buruzaemon
-#ssh = ssh -i ~/.ssh/id_rsa_bitbucket -C 
+ssh = ssh -i ~/.ssh/id_rsa_bitbucket -C 
 verbose = True
 fallbackencoding = utf8
 
