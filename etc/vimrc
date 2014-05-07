@@ -11,6 +11,8 @@ compiler ruby
 "colorscheme zenburn
 set background=dark
 color mango
+"set background=light
+"colorscheme solarized 
 
 set autoindent
 set smartindent
@@ -95,6 +97,12 @@ if has("autocmd")
     autocmd FileType eruby let b:surround_104 = "<%= \r %>"
     " 't'
     autocmd FileType eruby let b:surround_116 = "<%=t \r %>"
+
+    " restore cursor position
+    autocmd BufReadPost *
+     \ if line("'\"") > 1 && line("'\"") <= line("$") |
+     \     exe "normal! g`\"" |        
+     \ endif
 endif
 
 " MAPPINGS
