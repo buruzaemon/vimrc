@@ -4,7 +4,7 @@
 
 $ mkdir ~/.vim
 $ cd ~/.vim
-$ hg clone https://buruzaemon@bitbucket.org/buruzaemon/me-vimrc 
+$ hg clone https://buruzaemon@bitbucket.org/buruzaemon/me-vimrc .
 $ cd
 $ ln -s .vim/etc/vimrc ~/.vimrc
 ```
