@@ -1,5 +1,5 @@
 ;; Chicken Scheme resource file
-(use readline irregex)
+;; updated for use with readline 4.1.1
+(use readline)
 (current-input-port (make-readline-port))
-(history-install-file-manager
-  (string-append (or (get-environment-variable "HOME") ".") "/.csi.history"))
+(install-history-file #f "/.csi.history")
